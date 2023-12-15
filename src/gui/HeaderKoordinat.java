@@ -7,6 +7,7 @@ public class HeaderKoordinat extends JPanel {
     private LeftHK leftHK;
     private RightHK rightHK;
     public HeaderKoordinat() {
+        setLayout(new BorderLayout());
         leftHK = new LeftHK();
         rightHK = new RightHK();
         add(leftHK, BorderLayout.WEST);
