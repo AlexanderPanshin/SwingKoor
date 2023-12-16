@@ -12,12 +12,14 @@ public class BasePanel extends JFrame {
     public BasePanel() {
         super("SwingKoor");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(500,500);
+        setSize(500,600);
         setLayout(new GridLayout(4,1));
         //setLayout(new BoxLayout(this.getContentPane(),BoxLayout.Y_AXIS));
         headerKoordinate = new HeaderKoordinat();
+        bodyRectangle = new BodyRectengle();
 
         add(headerKoordinate);
+        add(bodyRectangle);
         BasePanel = this;
         setVisible(true);
     }
