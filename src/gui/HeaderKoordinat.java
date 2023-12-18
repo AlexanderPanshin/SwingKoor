@@ -13,4 +13,12 @@ public class HeaderKoordinat extends JPanel {
         add(leftHK, BorderLayout.WEST);
         add(rightHK,BorderLayout.EAST);
     }
+
+    public  LeftHK getLeftHK() {
+        return leftHK;
+    }
+
+    public RightHK getRightHK() {
+        return rightHK;
+    }
 }

@@ -1,17 +1,26 @@
 package gui;
 
+import logik.MassLine;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class BasePanel extends JFrame {
-    private JPanel headerKoordinate;
+    private static HeaderKoordinat headerKoordinate;
     private JPanel bodyRectangle;
     private JPanel footerKoordinate;
-    private JFrame BasePanel;
+    private static JFrame BasePanel;
+    private static MassLine massLine;
+
+    public static MassLine getMassLine() {
+        return massLine;
+    }
+
     public BasePanel() {
         super("SwingKoor");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(500,720);
+        massLine = new MassLine();
         //setLayout(new GridLayout(3,1));
         setLayout(new BoxLayout(this.getContentPane(),BoxLayout.Y_AXIS));
         headerKoordinate = new HeaderKoordinat();
@@ -21,10 +30,11 @@ public class BasePanel extends JFrame {
         add(bodyRectangle);
         add(footerKoordinate);
         BasePanel = this;
+        setResizable(false);
         setVisible(true);
     }
 
-    public JPanel getHeaderKoordinate() {
+    public static HeaderKoordinat getHeaderKoordinate() {
         return headerKoordinate;
     }
 
@@ -37,7 +47,7 @@ public class BasePanel extends JFrame {
         return footerKoordinate;
     }
 
-    public JFrame getBasePanel() {
+    public static JFrame getBasePanel() {
         return BasePanel;
     }
 }

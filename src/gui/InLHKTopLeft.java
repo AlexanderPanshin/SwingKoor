@@ -20,4 +20,15 @@ public class InLHKTopLeft extends JPanel {
         add(new JScrollPane(startXarea));
         add(new JScrollPane(startYarea));
     }
+
+    public JTextField getStartXarea() {
+        return startXarea;
+    }
+
+    public JTextField getStartYarea() {
+        return startYarea;
+    }
+    public boolean isEmpathy(){
+        return startXarea.getText().equals("")&&startYarea.getText().equals("");
+    }
 }

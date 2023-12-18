@@ -20,4 +20,15 @@ public class InLHKTopRight extends JPanel {
         add(new JScrollPane(endXarea));
         add(new JScrollPane(endYarea));
     }
+
+    public JTextField getEndXarea() {
+        return endXarea;
+    }
+
+    public JTextField getEndYarea() {
+        return endYarea;
+    }
+    public boolean isEmpathy(){
+        return endXarea.getText().equals("")&&endYarea.getText().equals("");
+    }
 }

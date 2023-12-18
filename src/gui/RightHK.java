@@ -30,4 +30,8 @@ public class RightHK extends JPanel {
         //scrollPane.setPreferredSize(preferredSize);
         return preferredSize;
     }
+
+    public JTable getTable() {
+        return table;
+    }
 }

@@ -13,4 +13,12 @@ public class LeftHK extends JPanel {
         add(topPanel, BorderLayout.NORTH);
         add(botPanel,BorderLayout.SOUTH);
     }
+
+    public InnerLeftHKTop getTopPanel() {
+        return topPanel;
+    }
+
+    public InnerLeftHKBot getBotPanel() {
+        return botPanel;
+    }
 }

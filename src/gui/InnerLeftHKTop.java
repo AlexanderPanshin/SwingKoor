@@ -16,4 +16,12 @@ public class InnerLeftHKTop extends JPanel {
         add(leftPanel,BorderLayout.WEST);
         add(rightPanel,BorderLayout.EAST);
     }
+
+    public InLHKTopLeft getLeftPanel() {
+        return leftPanel;
+    }
+
+    public InLHKTopRight getRightPanel() {
+        return rightPanel;
+    }
 }
