@@ -6,20 +6,20 @@ import java.awt.*;
 public class BasePanel extends JFrame {
     private JPanel headerKoordinate;
     private JPanel bodyRectangle;
-    private JPanel canvasRectangle;
     private JPanel footerKoordinate;
     private JFrame BasePanel;
     public BasePanel() {
         super("SwingKoor");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(500,600);
-        setLayout(new GridLayout(4,1));
-        //setLayout(new BoxLayout(this.getContentPane(),BoxLayout.Y_AXIS));
+        setSize(500,720);
+        //setLayout(new GridLayout(3,1));
+        setLayout(new BoxLayout(this.getContentPane(),BoxLayout.Y_AXIS));
         headerKoordinate = new HeaderKoordinat();
         bodyRectangle = new BodyRectengle();
-
+        footerKoordinate = new FooterKoordinate();
         add(headerKoordinate);
         add(bodyRectangle);
+        add(footerKoordinate);
         BasePanel = this;
         setVisible(true);
     }
@@ -32,9 +32,6 @@ public class BasePanel extends JFrame {
         return bodyRectangle;
     }
 
-    public JPanel getCanvasRectangle() {
-        return canvasRectangle;
-    }
 
     public JPanel getFooterKoordinate() {
         return footerKoordinate;
