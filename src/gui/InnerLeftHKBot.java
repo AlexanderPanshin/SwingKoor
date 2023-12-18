@@ -1,6 +1,7 @@
 package gui;
 
 import listiner.AddLine;
+import listiner.DeleteLine;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,6 +16,7 @@ public class InnerLeftHKBot extends JPanel {
         addOtr = new JButton("Добавить отрезок");
         addOtr.addActionListener(new AddLine());
         delOtr = new JButton("Удалить отрезок");
+        delOtr.addActionListener(new DeleteLine());
         add(delOtr, BorderLayout.NORTH);
         add(addOtr,BorderLayout.SOUTH);
     }

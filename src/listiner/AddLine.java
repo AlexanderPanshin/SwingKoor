@@ -23,7 +23,6 @@ public class AddLine implements ActionListener {
             BasePanel.getMassLine().getMassLine().add(new Line(startX,startY,endX,endY));
             DefaultTableModel model = (DefaultTableModel) BasePanel.getHeaderKoordinate().getRightHK().getTable().getModel();
             model.insertRow(0,new Integer[]{startX,startY,endX,endY});
-            System.out.println("metod");
         }
     }
 }
