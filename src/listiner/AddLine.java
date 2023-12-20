@@ -1,6 +1,7 @@
 package listiner;
 
 import gui.BasePanel;
+import logik.Dot;
 import logik.Line;
 
 import javax.swing.table.DefaultTableModel;
@@ -20,7 +21,7 @@ public class AddLine implements ActionListener {
             Integer startY = Integer.parseInt(stratyString);
             Integer endX = Integer.parseInt(endxString);
             Integer endY = Integer.parseInt(endyString);
-            BasePanel.getMassLine().getMassLine().add(new Line(startX,startY,endX,endY));
+            BasePanel.getMassLine().getMassLine().add(new Line(new Dot(startX,startY),new Dot(endX,endY)));
             DefaultTableModel model = (DefaultTableModel) BasePanel.getHeaderKoordinate().getRightHK().getTable().getModel();
             model.insertRow(0,new Integer[]{startX,startY,endX,endY});
         }

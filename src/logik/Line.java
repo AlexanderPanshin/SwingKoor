@@ -3,32 +3,20 @@ package logik;
 import java.util.Objects;
 
 public class Line {
-    private int startX;
-    private int startY;
-    private int endX;
-    private int endY;
+    private Dot start;
+    private Dot end;
 
-    public Line(int startX, int startY, int endX, int endY) {
-        this.startX = startX;
-        this.startY = startY;
-        this.endX = endX;
-        this.endY = endY;
+    public Line(Dot start, Dot end) {
+        this.start = start;
+        this.end = end;
     }
 
-    public int getStartX() {
-        return startX;
+    public Dot getStart() {
+        return start;
     }
 
-    public int getStartY() {
-        return startY;
-    }
-
-    public int getEndX() {
-        return endX;
-    }
-
-    public int getEndY() {
-        return endY;
+    public Dot getEnd() {
+        return end;
     }
 
     @Override
@@ -36,11 +24,19 @@ public class Line {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Line line = (Line) o;
-        return startX == line.startX && startY == line.startY && endX == line.endX && endY == line.endY;
+        return Objects.equals(start, line.start) && Objects.equals(end, line.end);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(startX, startY, endX, endY);
+        return Objects.hash(start, end);
+    }
+
+    @Override
+    public String toString() {
+        return "Line{" +
+                "start=" + start +
+                ", end=" + end +
+                '}';
     }
 }

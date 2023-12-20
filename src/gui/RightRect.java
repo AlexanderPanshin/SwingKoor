@@ -8,4 +8,8 @@ public class RightRect extends JPanel {
         jTextArea = new JTextArea(5,13);
         add(jTextArea);
     }
+
+    public JTextArea getjTextArea() {
+        return jTextArea;
+    }
 }

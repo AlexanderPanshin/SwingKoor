@@ -13,4 +13,8 @@ public class LeftRectBot extends JPanel {
         add(downRigtKoor,BorderLayout.NORTH);
         add(xyEnd,BorderLayout.SOUTH);
     }
+
+    public InLeftRectBotGrid getXyEnd() {
+        return xyEnd;
+    }
 }

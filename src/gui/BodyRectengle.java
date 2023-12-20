@@ -14,4 +14,12 @@ public class BodyRectengle extends JPanel {
         add(leftRect,BorderLayout.WEST);
         add(rightRect,BorderLayout.EAST);
     }
+
+    public RightRect getRightRect() {
+        return rightRect;
+    }
+
+    public LeftRect getLeftRect() {
+        return leftRect;
+    }
 }

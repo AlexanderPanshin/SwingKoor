@@ -13,4 +13,8 @@ public class InLeftRectTopGridPostX extends JPanel{
         add(xLabel,BorderLayout.NORTH);
         add(xTopTextFiled,BorderLayout.SOUTH);
     }
+
+    public JTextField getxTopTextFiled() {
+        return xTopTextFiled;
+    }
 }

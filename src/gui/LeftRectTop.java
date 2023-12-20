@@ -13,4 +13,8 @@ public class LeftRectTop extends JPanel {
         add(upLeftKoor, BorderLayout.NORTH);
         add(xyStart,BorderLayout.SOUTH);
     }
+
+    public InLeftRectTopGrid getXyStart() {
+        return xyStart;
+    }
 }

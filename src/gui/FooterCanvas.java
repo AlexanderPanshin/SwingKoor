@@ -1,5 +1,7 @@
 package gui;
 
+import listiner.AddRect;
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -17,6 +19,7 @@ public class FooterCanvas extends JPanel {
         JPanel twoButton = new JPanel();
         twoButton.setLayout(new GridLayout(3,1));
         instanKoor = new JButton("Установить координаты прямоугольной области");
+        instanKoor.addActionListener(new AddRect());
         JLabel label = new JLabel("");
         otobrLine = new JButton("Отобразить отрезки и прямоугольную область");
         twoButton.add(instanKoor);

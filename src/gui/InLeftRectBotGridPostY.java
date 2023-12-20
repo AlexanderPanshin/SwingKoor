@@ -13,4 +13,8 @@ public class InLeftRectBotGridPostY extends JPanel{
         add(xLabel,BorderLayout.NORTH);
         add(xBotTextFiled,BorderLayout.SOUTH);
     }
+
+    public JTextField getxBotTextFiled() {
+        return xBotTextFiled;
+    }
 }

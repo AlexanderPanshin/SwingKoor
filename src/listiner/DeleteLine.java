@@ -1,6 +1,7 @@
 package listiner;
 
 import gui.BasePanel;
+import logik.Dot;
 import logik.Line;
 
 import javax.swing.table.DefaultTableModel;
@@ -22,7 +23,7 @@ public class DeleteLine implements ActionListener {
             Integer endY = Integer.parseInt(endyString);
             DefaultTableModel model = (DefaultTableModel) BasePanel.getHeaderKoordinate().getRightHK().getTable().getModel();
             int deletRow = 0;
-            if(BasePanel.getMassLine().getMassLine().remove(new Line(startX,startY,endX,endY))){
+            if(BasePanel.getMassLine().getMassLine().remove(new Line(new Dot(startX,startY),new Dot(endX,endY)))){
                 boolean iter = false;
                 for(int row = 0; row < model.getRowCount();row++){
                     if (model.getValueAt(row,0)!=null) {

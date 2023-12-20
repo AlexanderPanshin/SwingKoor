@@ -13,4 +13,12 @@ public class LeftRect extends JPanel {
         add(leftRectTop,BorderLayout.NORTH);
         add(leftRectBot,BorderLayout.SOUTH);
     }
+
+    public LeftRectTop getLeftRectTop() {
+        return leftRectTop;
+    }
+
+    public LeftRectBot getLeftRectBot() {
+        return leftRectBot;
+    }
 }
