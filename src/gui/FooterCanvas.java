@@ -1,6 +1,7 @@
 package gui;
 
 import listiner.AddRect;
+import listiner.PaintFigur;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -11,6 +12,7 @@ public class FooterCanvas extends JPanel {
     private JButton otobrLine;
     private JPanel canvasPanel;
     private JButton visibleKoor;
+    private JScrollPane jScrollPane;
 
     public FooterCanvas() {
         //setLayout(new GridLayout(4,1));
@@ -22,6 +24,7 @@ public class FooterCanvas extends JPanel {
         instanKoor.addActionListener(new AddRect());
         JLabel label = new JLabel("");
         otobrLine = new JButton("Отобразить отрезки и прямоугольную область");
+        otobrLine.addActionListener(new PaintFigur());
         twoButton.add(instanKoor);
         twoButton.add(label);
         twoButton.add(otobrLine);
@@ -30,9 +33,14 @@ public class FooterCanvas extends JPanel {
         JPanel panelCanvas = new JPanel();
         canvasPanel = new JPanel();
         //canvasPanel.setSize(300,200);
-        canvasPanel.setPreferredSize(new Dimension(300,200));
+        //canvasPanel.setPreferredSize(new Dimension(297,197));
         canvasPanel.setBorder(new LineBorder(Color.BLACK));
-        panelCanvas.add(canvasPanel);
+        jScrollPane = new JScrollPane(canvasPanel);
+        jScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        jScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+        jScrollPane.setViewportView(canvasPanel);
+        jScrollPane.setPreferredSize(new Dimension(300,200));
+        panelCanvas.add(jScrollPane);
         ///
         ///
         JPanel oneButtonJpanel = new JPanel(new GridLayout(1,1));
@@ -44,5 +52,13 @@ public class FooterCanvas extends JPanel {
         add(twoButton);
         add(panelCanvas);
         add(oneButtonJpanel);
+    }
+
+    public JPanel getCanvasPanel() {
+        return canvasPanel;
+    }
+
+    public JScrollPane getjScrollPane() {
+        return jScrollPane;
     }
 }

@@ -8,7 +8,7 @@ import java.awt.*;
 public class BasePanel extends JFrame {
     private static HeaderKoordinat headerKoordinate;
     private static BodyRectengle bodyRectangle;
-    private JPanel footerKoordinate;
+    private static FooterKoordinate footerKoordinate;
     private static JFrame BasePanel;
     private static MassLine massLine;
 
@@ -43,7 +43,7 @@ public class BasePanel extends JFrame {
     }
 
 
-    public JPanel getFooterKoordinate() {
+    public static FooterKoordinate getFooterKoordinate() {
         return footerKoordinate;
     }
 
