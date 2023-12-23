@@ -30,17 +30,27 @@ public class FooterCanvas extends JPanel {
         twoButton.add(otobrLine);
         ///
         ///
-        JPanel panelCanvas = new JPanel();
+        //JPanel panelCanvas = new JPanel();
         canvasPanel = new JPanel();
+        canvasPanel.setLayout(new GridLayout(1,1));
         //canvasPanel.setSize(300,200);
         //canvasPanel.setPreferredSize(new Dimension(297,197));
         canvasPanel.setBorder(new LineBorder(Color.BLACK));
         jScrollPane = new JScrollPane(canvasPanel);
         jScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         jScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
-        jScrollPane.setViewportView(canvasPanel);
-        jScrollPane.setPreferredSize(new Dimension(300,200));
-        panelCanvas.add(jScrollPane);
+
+        ///
+        /*canvasPanel.setMinimumSize(new Dimension(200, 200));
+        canvasPanel.setPreferredSize(new Dimension(400, 182));
+        canvasPanel.setMaximumSize(new Dimension(1000, 1000));*/
+
+        jScrollPane.setMinimumSize(new Dimension(300, 200));
+        jScrollPane.setPreferredSize(new Dimension(300, 200));
+        jScrollPane.setMaximumSize(new Dimension(1000, 1000));
+
+
+        //panelCanvas.add(jScrollPane);
         ///
         ///
         JPanel oneButtonJpanel = new JPanel(new GridLayout(1,1));
@@ -50,8 +60,10 @@ public class FooterCanvas extends JPanel {
 
 
         add(twoButton);
-        add(panelCanvas);
+        //add(panelCanvas);
+        add(jScrollPane);
         add(oneButtonJpanel);
+        System.out.println("CreatPanek");
     }
 
     public JPanel getCanvasPanel() {

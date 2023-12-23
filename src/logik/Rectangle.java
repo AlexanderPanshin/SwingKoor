@@ -1,6 +1,9 @@
 package logik;
 
-public class Rectangle {
+import javax.swing.*;
+import java.awt.*;
+
+public class Rectangle extends JComponent {
     private Line ab;
     private Line bc;
     private Line cd;
@@ -37,19 +40,20 @@ public class Rectangle {
         return da;
     }
 
-    public int getX() {
-        return x;
+
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        Graphics2D g2 = (Graphics2D) g;
+
+        Color c = Color.red;
+        g2.setColor(c);
+        g2.drawRect(x, y, width, height);
     }
 
-    public int getY() {
-        return y;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public int getHeight() {
-        return height;
+    @Override
+    public Dimension getPreferredSize() {
+        return new Dimension(width + x+10, height+y+10);
     }
 }
