@@ -10,7 +10,7 @@ import java.awt.*;
 public class FooterCanvas extends JPanel {
     private JButton instanKoor;
     private JButton otobrLine;
-    private JPanel canvasPanel;
+    private JComponent canvasPanel;
     private JButton visibleKoor;
     private JScrollPane jScrollPane;
 
@@ -32,9 +32,12 @@ public class FooterCanvas extends JPanel {
         ///
         //JPanel panelCanvas = new JPanel();
         canvasPanel = new JPanel();
-        canvasPanel.setLayout(new GridLayout(1,1));
-        //canvasPanel.setSize(300,200);
-        //canvasPanel.setPreferredSize(new Dimension(297,197));
+        canvasPanel.setLayout(null);//грид11
+
+        /*canvasPanel.setSize(300,200);
+        canvasPanel.setPreferredSize(new Dimension(297,197));
+        canvasPanel.setLocation(0,0);*/
+
         canvasPanel.setBorder(new LineBorder(Color.BLACK));
         jScrollPane = new JScrollPane(canvasPanel);
         jScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
@@ -63,14 +66,17 @@ public class FooterCanvas extends JPanel {
         //add(panelCanvas);
         add(jScrollPane);
         add(oneButtonJpanel);
-        System.out.println("CreatPanek");
     }
 
-    public JPanel getCanvasPanel() {
+    public JComponent getCanvasPanel() {
         return canvasPanel;
     }
 
     public JScrollPane getjScrollPane() {
         return jScrollPane;
+    }
+
+    public void setCanvasPanel(JComponent canvasPanel) {
+        this.canvasPanel = canvasPanel;
     }
 }

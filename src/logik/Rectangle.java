@@ -20,8 +20,8 @@ public class Rectangle extends JComponent {
         this.da = new Line(new Dot(leftup.getX(), rightDown.getY()),leftup);
         this.x = leftup.getX();
         this.y = leftup.getY();
-        this.width = rightDown.getX() - leftup.getX();
-        this.height = leftup.getY() - rightDown.getY();
+        this.width = ab.getWidth();
+        this.height = bc.getHeight();
     }
 
     public Line getAb() {
@@ -40,7 +40,25 @@ public class Rectangle extends JComponent {
         return da;
     }
 
+    @Override
+    public int getX() {
+        return x;
+    }
 
+    @Override
+    public int getY() {
+        return y;
+    }
+
+    @Override
+    public int getWidth() {
+        return width;
+    }
+
+    @Override
+    public int getHeight() {
+        return height;
+    }
 
     @Override
     protected void paintComponent(Graphics g) {

@@ -1,6 +1,7 @@
 package listiner;
 
 import gui.BasePanel;
+import gui.CanvasCom;
 import logik.Line;
 import logik.MassLine;
 
@@ -24,10 +25,19 @@ public class PaintFigur implements ActionListener {
             int width = BasePanel.getFooterKoordinate().getLeftFooter().getFooterCanvas().getWidth();
             int height =  BasePanel.getFooterKoordinate().getLeftFooter().getFooterCanvas().getHeight();
             //BasePanel.getFooterKoordinate().getLeftFooter().getFooterCanvas().getCanvasPanel().setPreferredSize(new Dimension(width,height));*/
+            /*if(MassLine.getMassLine()!=null) {
+                for (Line line : MassLine.getMassLine()) {
+                    BasePanel.getFooterKoordinate().getLeftFooter().getFooterCanvas().getCanvasPanel().add(line);
+                }
+            }
             BasePanel.getFooterKoordinate().getLeftFooter().getFooterCanvas().getCanvasPanel().add(MassLine.getRectangle());
             BasePanel.getFooterKoordinate().getLeftFooter().getFooterCanvas().getCanvasPanel().revalidate();
-            BasePanel.getFooterKoordinate().getLeftFooter().getFooterCanvas().getCanvasPanel().repaint();
-
+            BasePanel.getFooterKoordinate().getLeftFooter().getFooterCanvas().getCanvasPanel().repaint();*/
+            /*BasePanel.getFooterKoordinate().getLeftFooter().getFooterCanvas().setCanvasPanel(new CanvasCom());
+            BasePanel.getFooterKoordinate().getLeftFooter().getFooterCanvas().getCanvasPanel().revalidate();
+            BasePanel.getFooterKoordinate().getLeftFooter().getFooterCanvas().getCanvasPanel().repaint();*/
+            BasePanel.getFooterKoordinate().getLeftFooter().getFooterCanvas().getjScrollPane().setViewportView(new CanvasCom());
+            BasePanel.getFooterKoordinate().getLeftFooter().getFooterCanvas().getjScrollPane().repaint();
         }
     }
 }
